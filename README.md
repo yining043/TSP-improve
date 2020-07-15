@@ -1,5 +1,5 @@
 # TSP-improve
-This repo implements paper [Wu et. al., *Learning Improvement Heuristics for Solving Routing Problems*, arXiv, 2019](https://arxiv.org/abs/1912.05784v2), which solves TSP with the improvement-base Deep Reinforcement Learning methods.
+This repo implements paper [Wu et. al., *Learning Improvement Heuristics for Solving Routing Problems*, arXiv, 2019](https://arxiv.org/abs/1912.05784v2), which solves TSP with the improvement-base Deep Reinforcement Learning method.
 
 ![tsp](./outputs/ep_gif_0.gif)
 
@@ -16,7 +16,7 @@ For more details, please see the paper [Wu et. al., *Learning Improvement Heuris
 ```
 
 # Jupyter Notebook
-We provide a Jupyter notebook to guide you to get started and understand our code. Please found the notebook at my './Solving TSP with Improvement-base DRL.ipynb'
+We provide a Jupyter notebook to help you get started and understand our code. Please open the  [notebook here](file:/../../Solving%20TSP%20with%20Improvement-base%20DRL.ipynb) for more details.
 
 # dependencies
 * Python>=3.6
@@ -45,11 +45,6 @@ CUDA_VISIBLE_DEVICES=0 python run.py --graph_size 20 --seed 1234 --n_epochs 100 
 --eval_only --load_path '{add model to load here}'
 ```
 Note: A pre-trained model can be found at './outputs/tsp_20/tsp_20200714T212735/epoch-99.pt'
-
-# Disclaimer
-All code is provided without warranty. 
-
-This repo was developed for educational purposes.
 
 # Acknowledgements
 The code is  based on the repo [wouterkool/attention-learn-to-route](https://github.com/wouterkool/attention-learn-to-route) and the paper [Wu et. al., *Learning Improvement Heuristics for Solving Routing Problems*, arXiv, 2019](https://arxiv.org/abs/1912.05784v2).
