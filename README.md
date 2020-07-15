@@ -16,7 +16,7 @@ For more details, please see the paper [Wu et. al., *Learning Improvement Heuris
 ```
 
 # Jupyter Notebook
-We provide a Jupyter notebook to help you get started and understand our code. Please open the  [notebook here](file:/../../Solving%20TSP%20with%20Improvement-base%20DRL.ipynb) for more details.
+We provide a Jupyter notebook to help you get started and understand our code. Please open the  [notebook here](Solving%20TSP%20with%20Improvement-base%20DRL.ipynb) for more details.
 
 # dependencies
 * Python>=3.6
