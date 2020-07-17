@@ -20,7 +20,8 @@ We provide a Jupyter notebook to help you get started and understand our code. P
 
 Note: due to the 100MB limit of Github, please download the logs folder for the pre-trained model via [Google Drive](https://drive.google.com/drive/folders/1IaFPXh1IzHz02LqBSRa2wqhPjQ7WksOd?usp=sharing) and put it under './logs/pre_trained/' folder.
 
-# dependencies
+# Dependencies
+## Install with pip
 * Python>=3.6
 * PyTorch>=1.1
 * numpy
