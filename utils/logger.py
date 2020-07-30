@@ -29,9 +29,9 @@ def log_to_screen(time_used, init_value, best_value, reward, improvement,
     print('-'*60, '\n')
     
 def log_to_tb_val(tb_logger, time_used, init_value, best_value, reward, improvement,
-                  batch_size, dataset_size, T, no_figures, epoch):
-    if not no_figures:
-        tb_logger.log_images('validation/improve_pg',[plot_improve_pg(init_value, reward)], epoch)
+                  batch_size, dataset_size, T, epoch):
+    
+    tb_logger.log_images('validation/improve_pg',[plot_improve_pg(init_value, reward)], epoch)
 
     tb_logger.log_value('validation/avg_time',  time_used.mean() / dataset_size, epoch)
     tb_logger.log_value('validation/avg_total_reward', reward.sum(1).mean(), epoch)
@@ -44,7 +44,7 @@ def log_to_tb_val(tb_logger, time_used, init_value, best_value, reward, improvem
     tb_logger.log_value(f'validation/avg_best_cost', best_value.mean(), epoch)
 
 def log_to_tb_train(tb_logger, optimizer, model, baseline, total_cost, grad_norms, reward, 
-               exchange_history, reinforce_loss, baseline_loss, log_likelihood, initial_cost, no_figures, mini_step):
+               exchange_history, reinforce_loss, baseline_loss, log_likelihood, initial_cost, mini_step):
     
     tb_logger.log_value('learnrate_pg', optimizer.param_groups[0]['lr'], mini_step)            
     avg_cost = (total_cost).mean().item()
@@ -68,6 +68,5 @@ def log_to_tb_train(tb_logger, optimizer, model, baseline, total_cost, grad_norm
     exchange_history = torch.stack(exchange_history)
     tb_logger.log_histogram('exchange', (exchange_history.view(-1).tolist()), mini_step)
     
-    if not no_figures:
-        tb_logger.log_images('grad/actor',[plot_grad_flow(model)], mini_step)
-        tb_logger.log_images('grad/critic',[plot_grad_flow(baseline.critic)], mini_step)
+    tb_logger.log_images('grad/actor',[plot_grad_flow(model)], mini_step)
+    tb_logger.log_images('grad/critic',[plot_grad_flow(baseline.critic)], mini_step)

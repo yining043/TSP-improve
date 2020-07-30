@@ -8,7 +8,6 @@ Created on Sat Jun 27 18:47:10 2020
 
 from utils.plots import plot_tour
 import imageio
-import torch
 from tqdm import tqdm
         
 def record_gif(batch, history, filename = 'ep_gif', dpi = 30):

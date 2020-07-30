@@ -14,7 +14,7 @@ class TSP(object):
         self.do_assert = with_assert
         print(f'TSP with {self.size} nodes.')
     
-    def step(self, batch, rec, exchange):
+    def step(self, rec, exchange):
         
         device = rec.device
         
@@ -34,12 +34,7 @@ class TSP(object):
                 rec_num[i][loc_of_first] = rec_num[i][loc_of_second]
                 rec_num[i][loc_of_second] = temp
                 
-                
-                
-        next_state = torch.tensor(rec_num, device = device)
-        obj = self.get_costs(batch, next_state)
-    
-        return next_state, obj, None
+        return torch.tensor(rec_num, device = device)
             
     
     def get_costs(self, dataset, rec):
