@@ -1,10 +1,10 @@
 # TSP-improve
-This repo implements paper [Wu et. al., *Learning Improvement Heuristics for Solving Routing Problems*, arXiv, 2019](https://arxiv.org/abs/1912.05784v2), which solves TSP with the improvement-base Deep Reinforcement Learning method.
+This repo implements paper [Wu et. al., *Learning Improvement Heuristics for Solving Routing Problems*, IEEE Transactions on Neural Networks and Learning Systems, 2021](https://arxiv.org/abs/1912.05784v2), which solves TSP with the improvement-base Deep Reinforcement Learning method.
 
 ![tsp](./outputs/ep_gif_0.gif)
 
 # Paper
-For more details, please see the paper [Wu et. al., *Learning Improvement Heuristics for Solving Routing Problems*, IEEE TNNALS, 2021](https://arxiv.org/abs/1912.05784v2).
+For more details, please see the paper [Wu et. al., *Learning Improvement Heuristics for Solving Routing Problems*, IEEE Transactions on Neural Networks and Learning Systems, 2021](https://arxiv.org/abs/1912.05784v2).
 
 ```
 @article{wu2021learning,
@@ -50,4 +50,4 @@ CUDA_VISIBLE_DEVICES=0 python run.py --graph_size 20 --seed 1234 --n_epochs 100 
 Note: A pre-trained model can be found at './outputs/tsp_20/tsp_20200714T212735/epoch-99.pt'
 
 # Acknowledgements
-The code is  based on the repo [wouterkool/attention-learn-to-route](https://github.com/wouterkool/attention-learn-to-route) and the paper [Wu et. al., *Learning Improvement Heuristics for Solving Routing Problems*, IEEE TNNALS, 2021](https://arxiv.org/abs/1912.05784v2).
+The code is  based on the repo [wouterkool/attention-learn-to-route](https://github.com/wouterkool/attention-learn-to-route) and the paper [Wu et. al., *Learning Improvement Heuristics for Solving Routing Problems*, IEEE Transactions on Neural Networks and Learning Systems, 2021](https://arxiv.org/abs/1912.05784v2).
