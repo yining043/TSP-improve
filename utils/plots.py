@@ -51,7 +51,7 @@ def plot_improve_pg(initial_value, reward):
     
     plt.ioff()
     fig = plt.figure(figsize=(4,3))
-    plt.plot(initial_value.mean() - np.cumsum(reward.cpu().mean(0)))
+    plt.plot(initial_value.cpu().mean() - np.cumsum(reward.cpu().mean(0)))
     
     plt.xlabel("T")
     plt.ylabel("Cost")
