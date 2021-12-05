@@ -30,7 +30,7 @@ Note: due to the 100MB limit of Github, please download the logs folder for the 
 * tensorboard_logger
 * imageio (optional, for plots)
 
-## One more thing
+## Troubleshooting
 For the exception below from package tensorboard_logger,
 ```python
 AttributeError: module 'scipy.misc' has no attribute 'toimage'
@@ -48,6 +48,11 @@ CUDA_VISIBLE_DEVICES=0 python run.py --graph_size 20 --seed 1234 --n_epochs 100 
 --eval_only --load_path '{add model to load here}'
 ```
 Note: A pre-trained model can be found at './outputs/tsp_20/tsp_20200714T212735/epoch-99.pt'
+
+# One more thing
+You may also be interested in our new approach called [DACT](https://github.com/yining043/VRP-DACT) (NeurIPS 2021) which is more advanced than the model implemented in this repo. DACT achieves the SOTA performance among purely learning-based improvement solvers for routing problems.
+
+Paper: Yining Ma, Jingwen Li, Zhiguang Cao, Wen Song, Le Zhang, Zhenghua Chen, Jing Tang, “[Learning to iteratively solve routing problems with dual-aspect collaborative transformer](https://arxiv.org/abs/2110.02544),” in Advances in Neural Information Processing Systems, vol. 34, 2021.
 
 # Acknowledgements
 The code is  based on the repo [wouterkool/attention-learn-to-route](https://github.com/wouterkool/attention-learn-to-route) and the paper [Wu et. al., *Learning Improvement Heuristics for Solving Routing Problems*, IEEE Transactions on Neural Networks and Learning Systems, 2021](https://arxiv.org/abs/1912.05784v2).
