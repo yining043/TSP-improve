@@ -108,7 +108,7 @@ class MultiHeadAttention(nn.Module):
 
         heads = torch.matmul(attn, V)
 
-        out = torch.mm(
+        out = torch.    mm(
             heads.permute(1, 2, 0, 3).contiguous().view(-1, self.n_heads * self.val_dim),
             self.W_out.view(-1, self.embed_dim)
         ).view(batch_size, n_query, self.embed_dim)
@@ -258,7 +258,9 @@ class MultiHeadAttentionLayer(nn.Sequential):
                 nn.Sequential(
                     nn.Linear(embed_dim, feed_forward_hidden),
                     nn.ReLU(),
-                    nn.Linear(feed_forward_hidden, embed_dim)
+                    nn.Dropout(0.1),
+                    nn.Linear(feed_forward_hidden, embed_dim),
+                    nn.Dropout(0.1)
                 ) if feed_forward_hidden > 0 else nn.Linear(embed_dim, embed_dim)
             ),
             Normalization(embed_dim, normalization)
