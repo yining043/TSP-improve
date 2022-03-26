@@ -52,8 +52,10 @@ class CriticNetwork(nn.Module):
         
         self.value_head = nn.Sequential(
                 nn.Linear(embedding_dim, self.hidden_dim),
+                nn.Dropout(0.1),
                 nn.ReLU(),
-                nn.Linear(self.hidden_dim, 1)
+                nn.Linear(self.hidden_dim, 1),
+                nn.Dropout(0.1)
             )   
             
 
