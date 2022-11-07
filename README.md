@@ -15,6 +15,12 @@ For more details, please see the paper [Wu et. al., *Learning Improvement Heuris
 }
 ```
 
+# One more thing
+You may also be interested in our new approaches:
+
+- [DACT](https://github.com/yining043/VRP-DACT) (NeurIPS 2021) which is more advanced than the model implemented in this repo. DACT achieves the SOTA performance among purely learning-based improvement solvers for routing problems. Paper: Yining Ma, Jingwen Li, Zhiguang Cao, Wen Song, Le Zhang, Zhenghua Chen, Jing Tang, “[Learning to iteratively solve routing problems with dual-aspect collaborative transformer](https://arxiv.org/abs/2110.02544),” in Advances in Neural Information Processing Systems, vol. 34, 2021.
+- [N2S](https://github.com/yining043/PDP-N2S) (IJCAI 2022) which makes DACT more efficient for solving pickup and delivery problems (PDPs). And the proposed Synthesis Attention (Synth-Att) could largely enhance the efficiency of DACT. Paper: Yining Ma, Jingwen Li, Zhiguang Cao, Wen Song, Hongliang Guo, Yuejiao Gong and Yeow Meng Chee, “[Efficient Neural Neighborhood Search for Pickup and Delivery Problems](https://arxiv.org/abs/2204.11399),” in the 31st International Joint Conference on Artificial Intelligence (IJCAI 22), 2022.
+
 # Jupyter Notebook
 We provide a Jupyter notebook to help you get started and understand our code. Please open the  [notebook here](Solving%20TSP%20with%20Improvement-base%20DRL.ipynb) for more details.
 
@@ -48,12 +54,6 @@ CUDA_VISIBLE_DEVICES=0 python run.py --graph_size 20 --seed 1234 --n_epochs 100 
 --eval_only --load_path '{add model to load here}'
 ```
 Note: A pre-trained model can be found at './outputs/tsp_20/tsp_20200714T212735/epoch-99.pt'
-
-# One more thing
-You may also be interested in our new approaches:
-
-- [DACT](https://github.com/yining043/VRP-DACT) (NeurIPS 2021) which is more advanced than the model implemented in this repo. DACT achieves the SOTA performance among purely learning-based improvement solvers for routing problems. Paper: Yining Ma, Jingwen Li, Zhiguang Cao, Wen Song, Le Zhang, Zhenghua Chen, Jing Tang, “[Learning to iteratively solve routing problems with dual-aspect collaborative transformer](https://arxiv.org/abs/2110.02544),” in Advances in Neural Information Processing Systems, vol. 34, 2021.
-- [N2S](https://github.com/yining043/PDP-N2S) (IJCAI 2022) which makes DACT more efficient for solving pickup and delivery problems (PDPs). Paper: Yining Ma, Jingwen Li, Zhiguang Cao, Wen Song, Hongliang Guo, Yuejiao Gong and Yeow Meng Chee, “[Efficient Neural Neighborhood Search for Pickup and Delivery Problems](https://arxiv.org/abs/2204.11399),” in the 31st International Joint Conference on Artificial Intelligence (IJCAI 22), 2022.
 
 # Acknowledgements
 The code is  based on the repo [wouterkool/attention-learn-to-route](https://github.com/wouterkool/attention-learn-to-route) and the paper [Wu et. al., *Learning Improvement Heuristics for Solving Routing Problems*, IEEE Transactions on Neural Networks and Learning Systems, 2021](https://arxiv.org/abs/1912.05784v2).
